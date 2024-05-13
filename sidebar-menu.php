@@ -24,46 +24,46 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
 	}
 
   // jika menu data helm dipilih, menu data helm aktif
-  if ($_GET["module"]=="helm" || $_GET["module"]=="form_helm") { ?>
+  if ($_GET["module"]=="barang" || $_GET["module"]=="form_barang") { ?>
     <li class="active">
-      <a href="?module=helm"><i class="fa fa-folder"></i> Data Helm </a>
+      <a href="?module=barang"><i class="fa fa-folder"></i> Data Barang </a>
       </li>
   <?php
   }
   // jika tidak, menu data helm tidak aktif
   else { ?>
     <li>
-      <a href="?module=helm"><i class="fa fa-folder"></i> Data Helm </a>
+      <a href="?module=barang"><i class="fa fa-folder"></i> Data Barang </a>
       </li>
   <?php
   }
 
   // jika menu data helm masuk dipilih, menu data helm masuk aktif
-  if ($_GET["module"]=="helm_masuk" || $_GET["module"]=="form_helm_masuk") { ?>
+  if ($_GET["module"]=="barang_masuk" || $_GET["module"]=="form_barang_masuk") { ?>
     <li class="active">
-      <a href="?module=helm_masuk"><i class="fa fa-clone"></i> Data Helm Masuk </a>
+      <a href="?module=barang_masuk"><i class="fa fa-clone"></i> Data Barang Masuk </a>
       </li>
   <?php
   }
   // jika tidak, menu data helm masuk tidak aktif
   else { ?>
     <li>
-      <a href="?module=helm_masuk"><i class="fa fa-clone"></i> Data Helm Masuk </a>
+      <a href="?module=barang_masuk"><i class="fa fa-clone"></i> Data Barang Masuk </a>
       </li>
   <?php
   }
 
   // jika menu data helm keluar dipilih, menu data helm keluar aktif
-  if ($_GET["module"]=="helm_keluar" || $_GET["module"]=="form_helm_keluar") { ?>
+  if ($_GET["module"]=="barang_keluar" || $_GET["module"]=="form_barang_keluar") { ?>
     <li class="active">
-      <a href="?module=helm_keluar"><i class="fa fa-clone"></i> Data Helm Keluar </a>
+      <a href="?module=barang_keluar"><i class="fa fa-clone"></i> Data Barang Keluar </a>
       </li>
   <?php
   }
-  // jika tidak, menu data helm keluar tidak aktif
+  // jika tidak, menu data barang keluar tidak aktif
   else { ?>
     <li>
-      <a href="?module=helm_keluar"><i class="fa fa-clone"></i> Data Helm Keluar </a>
+      <a href="?module=barang_keluar"><i class="fa fa-clone"></i> Data Barang Keluar </a>
       </li>
   <?php
   }
@@ -72,40 +72,41 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
 	if ($_GET["module"]=="lap_stok") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
-            	<i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
+              
+            	<i class="fa fa-file-text"></i> <span>Laporan Stok</span> <i class="fa fa-angle-left pull-right"></i>
           	</a>
       		<ul class="treeview-menu">
-        		<li class="active"><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-        		<li><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
-            <li><a href="?module=lap_helm_keluar"><i class="fa fa-circle-o"></i> Helm Keluar </a></li>
+        		<li class="active"><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+        		<li><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
+            <li><a href="?module=lap_barang_keluar"><i class="fa fa-circle-o"></i> Barang Keluar </a></li>
       		</ul>
     	</li>
     <?php
 	}
-	// jika menu Laporan Helm Masuk dipilih, menu Laporan helm Masuk aktif
-	elseif ($_GET["module"]=="lap_helm_masuk") { ?>
+	// jika menu Laporan barang Masuk dipilih, menu Laporan barang Masuk aktif
+	elseif ($_GET["module"]=="lap_barang_masuk") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
           	</a>
       		<ul class="treeview-menu">
-        		<li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-        		<li class="active"><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
-            <li><a href="?module=lap_helm_keluar"><i class="fa fa-circle-o"></i> Helm Keluar </a></li>
+        		<li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+        		<li class="active"><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
+            <li><a href="?module=lap_barang_keluar"><i class="fa fa-circle-o"></i> Barang Keluar </a></li>
       		</ul>
     	</li>
     <?php
   }
-  // jika menu Laporan Helm Keluar dipilih, menu Laporan helm Keluar aktif
-	elseif ($_GET["module"]=="lap_helm_keluar") { ?>
+  // jika menu Laporan barang Keluar dipilih, menu Laporan barang Keluar aktif
+	elseif ($_GET["module"]=="lap_barang_keluar") { ?>
 		<li class="active treeview">
           	<a href="javascript:void(0);">
             	<i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
           	</a>
       		<ul class="treeview-menu">
-        		<li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-            <li><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
-            <li class="active"><a href="?module=lap_helm_keluar"><i class="fa fa-circle-o"></i> Helm Keluar </a></li>
+        		<li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+            <li><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
+            <li class="active"><a href="?module=lap_barang_keluar"><i class="fa fa-circle-o"></i> Barang Keluar </a></li>
       		</ul>
     	</li>
     <?php
@@ -117,9 +118,9 @@ if ($_SESSION['hak_akses']=='Super Admin') { ?>
             	<i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
           	</a>
       		<ul class="treeview-menu">
-        		<li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-        		<li><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
-            <li><a href="?module=lap_helm_keluar"><i class="fa fa-circle-o"></i> Helm Keluar </a></li>
+        		<li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+        		<li><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
+            <li><a href="?module=lap_barang_keluar"><i class="fa fa-circle-o"></i> Barang Keluar </a></li>
       		</ul>
     	</li>
     <?php
@@ -182,28 +183,28 @@ elseif ($_SESSION['hak_akses']=='Manajer') { ?>
 	<?php
 	}
 
-	// jika menu Laporan Stok helm dipilih, menu Laporan Stok helm aktif
+	// jika menu Laporan Stok barang dipilih, menu Laporan Stok barang aktif
   if ($_GET["module"]=="lap_stok") { ?>
     <li class="active treeview">
             <a href="javascript:void(0);">
               <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-            <li><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
+            <li class="active"><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Baran </a></li>
+            <li><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
           </ul>
       </li>
     <?php
   }
-  // jika menu Laporan helm Masuk dipilih, menu Laporan helm Masuk aktif
-  elseif ($_GET["module"]=="lap_helm_masuk") { ?>
+  // jika menu Laporan barang Masuk dipilih, menu Laporan barang Masuk aktif
+  elseif ($_GET["module"]=="lap_barang_masuk") { ?>
     <li class="active treeview">
             <a href="javascript:void(0);">
               <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
           <ul class="treeview-menu">
-            <li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-            <li class="active"><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
+            <li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+            <li class="active"><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
           </ul>
       </li>
     <?php
@@ -215,8 +216,8 @@ elseif ($_SESSION['hak_akses']=='Manajer') { ?>
               <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
           <ul class="treeview-menu">
-            <li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-            <li><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
+            <li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+            <li><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
           </ul>
       </li>
     <?php
@@ -264,58 +265,58 @@ if ($_SESSION['hak_akses']=='Gudang') { ?>
   <?php
   }
 
-  // jika menu data helm dipilih, menu data helm aktif
-  if ($_GET["module"]=="helm" || $_GET["module"]=="form_helm") { ?>
+  // jika menu data barang dipilih, menu data barang aktif
+  if ($_GET["module"]=="barang" || $_GET["module"]=="form_barang") { ?>
     <li class="active">
-      <a href="?module=helm"><i class="fa fa-folder"></i> Data Helm </a>
+      <a href="?module=barang"><i class="fa fa-folder"></i> Data Barang </a>
       </li>
   <?php
   }
-  // jika tidak, menu data helm tidak aktif
+  // jika tidak, menu data barang tidak aktif
   else { ?>
     <li>
-      <a href="?module=helm"><i class="fa fa-folder"></i> Data Helm </a>
+      <a href="?module=barang"><i class="fa fa-folder"></i> Data Barang </a>
       </li>
   <?php
   }
 
-  // jika menu data helm masuk dipilih, menu data helm masuk aktif
-  if ($_GET["module"]=="helm_masuk" || $_GET["module"]=="form_helm_masuk") { ?>
+  // jika menu data barang masuk dipilih, menu data barang masuk aktif
+  if ($_GET["module"]=="barang_masuk" || $_GET["module"]=="form_barang_masuk") { ?>
     <li class="active">
-      <a href="?module=helm_masuk"><i class="fa fa-clone"></i> Data Helm Masuk </a>
+      <a href="?module=barang_masuk"><i class="fa fa-clone"></i> Data Barang Masuk </a>
       </li>
   <?php
   }
-  // jika tidak, menu data Helm masuk tidak aktif
+  // jika tidak, menu data barang masuk tidak aktif
   else { ?>
     <li>
-      <a href="?module=helm_masuk"><i class="fa fa-clone"></i> Data Helm Masuk </a>
+      <a href="?module=barang_masuk"><i class="fa fa-clone"></i> Data Barang Masuk </a>
       </li>
   <?php
   }
 
-  // jika menu Laporan Stok helm dipilih, menu Laporan Stok helm aktif
+  // jika menu Laporan Stok barang dipilih, menu Laporan Stok barang aktif
   if ($_GET["module"]=="lap_stok") { ?>
     <li class="active treeview">
             <a href="javascript:void(0);">
               <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-            <li><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
+            <li class="active"><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+            <li><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
           </ul>
       </li>
     <?php
   }
-  // jika menu Laporan helm Masuk dipilih, menu Laporan helm Masuk aktif
-  elseif ($_GET["module"]=="lap_helm_masuk") { ?>
+  // jika menu Laporan barang Masuk dipilih, menu Laporan barang Masuk aktif
+  elseif ($_GET["module"]=="lap_barang_masuk") { ?>
     <li class="active treeview">
             <a href="javascript:void(0);">
               <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
           <ul class="treeview-menu">
-            <li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-            <li class="active"><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
+            <li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+            <li class="active"><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
           </ul>
       </li>
     <?php
@@ -327,8 +328,8 @@ if ($_SESSION['hak_akses']=='Gudang') { ?>
               <i class="fa fa-file-text"></i> <span>Laporan</span> <i class="fa fa-angle-left pull-right"></i>
             </a>
           <ul class="treeview-menu">
-            <li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Helm </a></li>
-            <li><a href="?module=lap_helm_masuk"><i class="fa fa-circle-o"></i> Helm Masuk </a></li>
+            <li><a href="?module=lap_stok"><i class="fa fa-circle-o"></i> Stok Barang </a></li>
+            <li><a href="?module=lap_barang_masuk"><i class="fa fa-circle-o"></i> Barang Masuk </a></li>
           </ul>
       </li>
     <?php

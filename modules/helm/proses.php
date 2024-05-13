@@ -1,12 +1,3 @@
-<!-- Aplikasi Persediaan Obat pada Apotek
-*******************************************************
-* Developer    : Vanny Hadiwijaya, S.Kom
-* Company      : Wijaya Studio
-* Release Date : 14 November 2018
-* Blog         : vannyhadiwijaya.blogspot.com
-* E-mail       : vannyhadiwijaya@gmail.com
-* Phone        : +62-821-3297-2137
--->
 
 <?php
 session_start();
@@ -40,7 +31,7 @@ else {
             // cek query
             if ($query) {
                 // jika berhasil tampilkan pesan berhasil simpan data
-                header("location: ../../main.php?module=helm&alert=1");
+                header("location: ../../main.php?module=barang&alert=1");
             }   
         }   
     }
@@ -69,7 +60,7 @@ else {
                 // cek query
                 if ($query) {
                     // jika berhasil tampilkan pesan berhasil update data
-                    header("location: ../../main.php?module=helm&alert=2");
+                    header("location: ../../main.php?module=barang&alert=2");
                 }         
             }
         }
@@ -86,7 +77,7 @@ else {
             // cek hasil query
             if ($query) {
                 // jika berhasil tampilkan pesan berhasil delete data
-                header("location: ../../main.php?module=helm&alert=3");
+                header("location: ../../main.php?module=barang&alert=3");
             }
         }
     }       

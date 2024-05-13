@@ -14,12 +14,12 @@ $hari_ini = date("d-m-Y");
 $no = 1;
 // fungsi query untuk menampilkan data dari tabel helm
 $query = mysqli_query($mysqli, "SELECT kode_helm,nama_helm,harga_beli,harga_jual,satuan,stok FROM is_helm ORDER BY nama_helm ASC")
-                                or die('Ada kesalahan pada query tampil Data Helm: '.mysqli_error($mysqli));
+                                or die('Ada kesalahan pada query tampil Data barang: '.mysqli_error($mysqli));
 $count  = mysqli_num_rows($query);
 ?>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <title>th-z (stok)</title>
+        <title>Denis Motor</title>
         <link rel="stylesheet" type="text/css" href="../../assets/css/laporan.css" />
         <style>
 table {
@@ -38,7 +38,7 @@ tr:hover {background-color:#f5f5f5;}
     </head>
     <body>
         <div id="title">
-            LAPORAN STOK HELM TOKO ZAHRA
+            LAPORAN STOK BARANG DENIS MOTOR
         </div>
         
         <hr><br>
@@ -48,8 +48,8 @@ tr:hover {background-color:#f5f5f5;}
                 <thead style="background:#e8ecee">
                     <tr class="tr-title">
                         <th height="20" align="center" valign="middle">NO.</th>
-                        <th height="20" align="center" valign="middle">KODE HELM</th>
-                        <th height="20" align="center" valign="middle">NAMA HELM</th>
+                        <th height="20" align="center" valign="middle">KODE BARANG</th>
+                        <th height="20" align="center" valign="middle">NAMA BARANG</th>
                         <th height="20" align="center" valign="middle">STOK</th>
                         <th height="20" align="center" valign="middle">CEK</th>
                         <th height="20" align="center" valign="middle">KET</th>
@@ -77,14 +77,14 @@ tr:hover {background-color:#f5f5f5;}
             </table>
 
             <div id="footer-tanggal">
-                Pekanbaru, <?php echo tgl_eng_to_ind("$hari_ini"); ?>
+                Jakarta, <?php echo tgl_eng_to_ind("$hari_ini"); ?>
             </div> 
             <div id="footer-jabatan">
-                Pimpinan
+                Pemilik
             </div>
             
             <div id="footer-nama">
-                Susilawati Rusli
+                Saman
             </div>
         </div>
         

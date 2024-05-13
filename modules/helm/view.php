@@ -1,19 +1,10 @@
-<!-- Aplikasi Persediaan Obat pada Apotek
-*******************************************************
-* Developer    : Vanny Hadiwijaya, S.Kom
-* Company      : Wijaya Studio
-* Release Date : 14 November 2018
-* Blog         : vannyhadiwijaya.blogspot.com
-* E-mail       : vannyhadiwijaya@gmail.com
-* Phone        : +62-821-3297-2137
--->
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    <i class="fa fa-folder-o icon-title"></i> Data Helm
+    <i class="fa fa-folder-o icon-title"></i> Data Barang
 
-    <a class="btn btn-primary btn-social pull-right" href="?module=form_helm&form=add" title="Tambah Data" data-toggle="tooltip">
+    <a class="btn btn-primary btn-social pull-right" href="?module=form_barang&form=add" title="Tambah Data" data-toggle="tooltip">
       <i class="fa fa-plus"></i> Tambah
     </a>
   </h1>
@@ -38,7 +29,7 @@
       echo "<div class='alert alert-success alert-dismissable'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
               <h4>  <i class='icon fa fa-check-circle'></i> Sukses!</h4>
-              Data helm baru berhasil disimpan.
+              Data Barang baru berhasil disimpan.
             </div>";
     }
     // jika alert = 2
@@ -47,7 +38,7 @@
       echo "<div class='alert alert-success alert-dismissable'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
               <h4>  <i class='icon fa fa-check-circle'></i> Sukses!</h4>
-              Data helm berhasil diubah.
+              Data Barang berhasil diubah.
             </div>";
     }
     // jika alert = 3
@@ -56,7 +47,7 @@
       echo "<div class='alert alert-success alert-dismissable'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>
               <h4>  <i class='icon fa fa-check-circle'></i> Sukses!</h4>
-              Data helm berhasil dihapus.
+              Data Barang berhasil dihapus.
             </div>";
     }
     ?>
@@ -69,8 +60,8 @@
             <thead>
               <tr>
                 <th class="center">No.</th>
-                <th class="center">Kode Helm</th>
-                <th class="center">Nama Helm</th>
+                <th class="center">Kode Barang</th>
+                <th class="center">Nama Barang</th>
                 <th class="center">Harga Beli</th>
                 <th class="center">Harga Minimal</th>
                 <th class="center">Stok</th>
@@ -84,7 +75,7 @@
             $no = 1;
             // fungsi query untuk menampilkan data dari tabel obat
             $query = mysqli_query($mysqli, "SELECT kode_helm,nama_helm,harga_beli,harga_jual,satuan,stok FROM is_helm ORDER BY kode_helm DESC")
-                                            or die('Ada kesalahan pada query tampil Data Obat: '.mysqli_error($mysqli));
+                                            or die('Ada kesalahan pada query tampil Data barang: '.mysqli_error($mysqli));
 
             // tampilkan data
             while ($data = mysqli_fetch_assoc($query)) { 
@@ -101,11 +92,11 @@
                       <td width='80' class='center'>$data[satuan]</td>
                       <td class='center' width='80'>
                         <div>
-                          <a data-toggle='tooltip' data-placement='top' title='Ubah' style='margin-right:5px' class='btn btn-primary btn-sm' href='?module=form_helm&form=edit&id=$data[kode_helm]'>
+                          <a data-toggle='tooltip' data-placement='top' title='Ubah' style='margin-right:5px' class='btn btn-primary btn-sm' href='?module=form_barang&form=edit&id=$data[kode_helm]'>
                               <i style='color:#fff' class='glyphicon glyphicon-edit'></i>
                           </a>";
             ?>
-                          <a data-toggle="tooltip" data-placement="top" title="Hapus" class="btn btn-danger btn-sm" href="modules/helm/proses.php?act=delete&id=<?php echo $data['kode_helm'];?>" onclick="return confirm('Anda yakin ingin menghapus helm <?php echo $data['nama_helm']; ?> ?');">
+                          <a data-toggle="tooltip" data-placement="top" title="Hapus" class="btn btn-danger btn-sm" href="modules/helm/proses.php?act=delete&id=<?php echo $data['kode_helm'];?>" onclick="return confirm('Anda yakin ingin menghapus barang? <?php echo $data['nama_helm']; ?> ?');">
                               <i style="color:#fff" class="glyphicon glyphicon-trash"></i>
                           </a>
             <?php

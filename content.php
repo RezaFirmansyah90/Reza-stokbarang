@@ -1,12 +1,3 @@
-<!-- Aplikasi Persediaan Obat pada Apotek
-*******************************************************
-* Developer    : Vanny Hadiwijaya, S.Kom
-* Company      : Wijaya Studio
-* Release Date : 14 November 2018
-* Blog         : vannyhadiwijaya.blogspot.com
-* E-mail       : vannyhadiwijaya@gmail.com
-* Phone        : +62-821-3297-2137
--->
 
 <?php
 /* panggil file database.php untuk koneksi ke database */
@@ -28,35 +19,35 @@ else {
 	}
 
 	// jika halaman konten yang dipilih helm, panggil file view helm
-	elseif ($_GET['module'] == 'helm') {
+	elseif ($_GET['module'] == 'barang') {
 		include "modules/helm/view.php";
 	}
 
 	// jika halaman konten yang dipilih form helm, panggil file form helm
-	elseif ($_GET['module'] == 'form_helm') {
+	elseif ($_GET['module'] == 'form_barang') {
 		include "modules/helm/form.php";
 	}
 	// -----------------------------------------------------------------------------
 
 	// jika halaman konten yang dipilih helm masuk, panggil file view helm masuk
-	elseif ($_GET['module'] == 'helm_masuk') {
-		include "modules/helm-masuk/view.php";
+	elseif ($_GET['module'] == 'barang_masuk') {
+		include "modules/barang-masuk/view.php";
 	}
 
 	// jika halaman konten yang dipilih form helm masuk, panggil file form helm masuk
-	elseif ($_GET['module'] == 'form_helm_masuk') {
-		include "modules/helm-masuk/form.php";
+	elseif ($_GET['module'] == 'form_barang_masuk') {
+		include "modules/barang-masuk/form.php";
 	}
 	// -----------------------------------------------------------------------------
 
 	// jika halaman konten yang dipilih helm keluar, panggil file view helm keluar
-	elseif ($_GET['module'] == 'helm_keluar') {
-		include "modules/helm-keluar/view.php";
+	elseif ($_GET['module'] == 'barang_keluar') {
+		include "modules/barang-keluar/view.php";
 	}
 
 	// jika halaman konten yang dipilih form helm keluar, panggil file form helm keluar
-	elseif ($_GET['module'] == 'form_helm_keluar') {
-		include "modules/helm-keluar/form.php";
+	elseif ($_GET['module'] == 'form_barang_keluar') {
+		include "modules/barang-keluar/form.php";
 	}
 	// -----------------------------------------------------------------------------
 
@@ -67,14 +58,14 @@ else {
 	// -----------------------------------------------------------------------------
 
 	// jika halaman konten yang dipilih laporan helm masuk, panggil file view laporan helm masuk
-	elseif ($_GET['module'] == 'lap_helm_masuk') {
-		include "modules/lap-helm-masuk/view.php";
+	elseif ($_GET['module'] == 'lap_barang_masuk') {
+		include "modules/lap-barang-masuk/view.php";
 	}
 	// -----------------------------------------------------------------------------
 
 	// jika halaman konten yang dipilih laporan helm keluar, panggil file view laporan helm keluar
-	elseif ($_GET['module'] == 'lap_helm_keluar') {
-		include "modules/lap-helm-keluar/view.php";
+	elseif ($_GET['module'] == 'lap_barang_keluar') {
+		include "modules/lap-barang-keluar/view.php";
 	}
 	// -----------------------------------------------------------------------------
 

@@ -1,7 +1,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    <i class="fa fa-file-text-o icon-title"></i> Laporan Stok Helm
+    <i class="fa fa-file-text-o icon-title"></i> Laporan Stok Barang
 
     <a class="btn btn-primary btn-social pull-right" href="modules/lap-stok/cetak.php" target="_blank">
       <i class="fa fa-print"></i> Cetak
@@ -22,8 +22,8 @@
             <thead>
               <tr>
                 <th class="center">No.</th>
-                <th class="center">Kode Helm</th>
-                <th class="center">Nama Helm</th>
+                <th class="center">Kode Barang</th>
+                <th class="center">Nama Barang</th>
                 <th class="center">Stok</th>
                 <th class="center">Satuan</th>
               </tr>
@@ -34,7 +34,7 @@
             $no = 1;
             // fungsi query untuk menampilkan data dari tabel helm
             $query = mysqli_query($mysqli, "SELECT kode_helm,nama_helm,harga_beli,harga_jual,satuan,stok FROM is_helm ORDER BY nama_helm ASC")
-                                            or die('Ada kesalahan pada query tampil Data Helm: '.mysqli_error($mysqli));
+                                            or die('Ada kesalahan pada query tampil Data barang: '.mysqli_error($mysqli));
 
             // tampilkan data
             while ($data = mysqli_fetch_assoc($query)) { 
